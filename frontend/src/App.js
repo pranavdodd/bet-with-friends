@@ -5,6 +5,7 @@ import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
 import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import "./App.css";
 
 export default function App() {
   const [user, loading] = useAuthState(auth);

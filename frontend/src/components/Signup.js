@@ -5,9 +5,9 @@ import { auth, db } from "../firebase";
 import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
-  const [email, setEmail] = useState("");
-  const [pass, setPass]   = useState("");
-  const [userName, setUserName] = useState("");
+  const [email, setEmail]         = useState("");
+  const [pass, setPass]           = useState("");
+  const [userName, setUserName]   = useState("");
   const nav = useNavigate();
 
   const onSubmit = async e => {
@@ -24,15 +24,31 @@ export default function Signup() {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <h2>Sign Up</h2>
-      <input placeholder="Username" value={userName}
-        onChange={e => setUserName(e.target.value)} required />
-      <input placeholder="Email"    value={email}
-        onChange={e => setEmail(e.target.value)} required />
-      <input placeholder="Password" type="password" value={pass}
-        onChange={e => setPass(e.target.value)} required />
-      <button type="submit">Sign Up</button>
-    </form>
+    <div className="form-container">
+      <h2>🎲 Bet With Friends</h2>
+      <form onSubmit={onSubmit}>
+        <input
+          placeholder="Username"
+          value={userName}
+          onChange={e => setUserName(e.target.value)}
+          required
+        />
+        <input
+          placeholder="Email"
+          type="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          required
+        />
+        <input
+          placeholder="Password"
+          type="password"
+          value={pass}
+          onChange={e => setPass(e.target.value)}
+          required
+        />
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
   );
 }

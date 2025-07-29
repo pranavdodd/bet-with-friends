@@ -1,38 +1,131 @@
-.App {
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+  margin-bottom: 1.5rem;
   text-align: center;
+  color: #007bff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-container input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-container button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 4px;
+  background: #007bff;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-container button:hover {
+  background: #0056b3;
+}
+
+/* Dashboard sidebar */
+.sidebar {
+  width: 250px;
+  padding: 1rem;
+  background: #fff;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.sidebar .group-item {
+  padding: 0.5rem;
+  margin-bottom: 0.25rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.sidebar .group-item.active,
+.sidebar .group-item:hover {
+  background: #e7f1ff;
+}
+
+/* Chat area */
+.chat-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 80vh;
 }
 
-.App-link {
-  color: #61dafb;
+.messages {
+  flex: 1;
+  padding: 1rem;
+  background: #fff;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.message {
+  margin-bottom: 0.75rem;
+}
+
+.message .author {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.message .bet {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.input-row {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.input-row input {
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.leaderboard {
+  margin-top: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.leaderboard h4 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.leaderboard .entry {
+  margin-bottom: 0.5rem;
 }
