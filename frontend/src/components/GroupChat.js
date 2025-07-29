@@ -4,6 +4,7 @@ import {
   addDoc, serverTimestamp, doc, updateDoc
 } from "firebase/firestore";
 import { auth, db } from "../firebase";
+import { onSnapshot } from "firebase/firestore";
 
 export default function GroupChat({ groupId }) {
   const [msgs, setMsgs] = useState([]);
