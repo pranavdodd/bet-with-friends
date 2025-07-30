@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { doc, updateDoc, getDocs, collection, query, where } from "firebase/firestore";
 import { auth, db } from "../firebase";
+import { doc, updateDoc, getDocs, collection, query, where } from "firebase/firestore";
 
 export default function AddFriend() {
   const [username, setUsername] = useState("");

@@ -7,7 +7,7 @@ export default function Leaderboard({ groupId }) {
 
   useEffect(() => {
     (async () => {
-      const snap = await getDocs(collection(db, "groups", groupId, "messages"));
+      const snap = await getDocs(collection(db,"groups", groupId,"messages"));
       // sum bets per user
       const tally = {};
       snap.docs.forEach(d => {
@@ -16,6 +16,7 @@ export default function Leaderboard({ groupId }) {
         tally[uid] += bet;
       });
       // fetch usernames
+      
       const entries = await Promise.all(
         Object.entries(tally).map(async ([uid, total]) => {
           const u = await db.collection("users").doc(uid).get();
