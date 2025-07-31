@@ -9,15 +9,15 @@ body {
 
 .form-container {
   max-width: 400px;
-  margin: 5rem auto;
-  padding: 2rem;
+  margin:5rem auto;
+  padding:2rem;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .form-container h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
   text-align: center;
   color: #007bff;
 }
